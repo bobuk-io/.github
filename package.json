@@ -1,0 +1,12 @@
+{
+  "name": "bobuk-io-organization-profile",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "prepare:profile": "node scripts/prepare.mjs",
+    "check": "node scripts/prepare.mjs --check",
+    "test": "node --test",
+    "publish:profile": "bash scripts/publish.sh"
+  }
+}

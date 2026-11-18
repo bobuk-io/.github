@@ -1,0 +1,48 @@
+{
+  "apps": [
+    {
+      "repo": "ting",
+      "name": "Ting",
+      "category": "for your keyboard",
+      "tagline": "Your next app. A few keys away.",
+      "description": "A leader-key launcher: press a leader, then a key or two to open an app, a link or a micro-app.",
+      "slug": "ting",
+      "icon": "ting-icon.png",
+      "cask": "ting"
+    },
+    {
+      "repo": "splash-finish",
+      "name": "Splash Finish",
+      "category": "for working with AI",
+      "tagline": "Your agents work. You stay focused.",
+      "description": "A native landing strip for Claude Code, Codex and pi sessions that are done or need your attention.",
+      "slug": "splash-finish",
+      "icon": "splash-finish-icon.png",
+      "cask": "splash-finish"
+    },
+    {
+      "repo": "HAScS",
+      "name": "HAScS",
+      "category": "for your home",
+      "tagline": "Your home scenes. One key away.",
+      "description": "A menu-bar selector for Home Assistant scenes.",
+      "slug": "hascs",
+      "icon": "hascs-icon.png"
+    },
+    {
+      "repo": "lowkey",
+      "name": "Lowkey",
+      "category": "for the web · source preview",
+      "sourcePreview": true,
+      "tagline": "A quiet browser for the sites you live in.",
+      "description": "Minimal WebKit windows with per-site profiles, aliases and keyboard-first control.",
+      "slug": "lowkey",
+      "icon": "lowkey-icon.png"
+    }
+  ],
+  "infrastructure": [
+    { "repo": "homebrew-tap", "description": "official Homebrew casks" },
+    { "repo": "BobukKit", "description": "shared native UI components" },
+    { "repo": "bobuk-io.github.io", "description": "the catalog site" }
+  ]
+}

@@ -1,0 +1,39 @@
+name: Refresh public organization profile
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'design/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/refresh-profile.yml'
+permissions:
+  contents: write
+concurrency:
+  group: organization-profile
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: npm run prepare:profile
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit public-only profile
+        run: |
+          if [[ -n "$(git status --porcelain -- profile/)" ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add --all profile/
+            git commit -m 'chore(profile): refresh public repositories'
+            git push
+          fi
