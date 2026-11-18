@@ -15,7 +15,7 @@ if gh api repos/bobuk-io/.github > /dev/null 2>&1; then
   [[ "$visibility" == public ]] || { echo 'The existing .github repository is not public. Refusing to change visibility.' >&2; exit 1; }
   origin="$(git remote get-url origin)"
   case "$origin" in
-    https://github.com/bobuk-io/.github|https://github.com/bobuk-io/.github.git|git@github.com:bobuk-io/.github.git) ;;
+    https://github.com/bobuk-io/.github|https://github.com/bobuk-io/.github.git|git@github.com:bobuk-io/.github.git|ssh://git@github.com/bobuk-io/.github.git) ;;
     *) echo 'Unexpected origin; refusing to push.' >&2; exit 1 ;;
   esac
   git push -u origin main
