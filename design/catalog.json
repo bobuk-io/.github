@@ -31,9 +31,8 @@
     },
     {
       "repo": "lowkey",
-      "name": "Lowkey",
-      "category": "for the web · source preview",
-      "sourcePreview": true,
+      "name": "lowkey",
+      "category": "for the web",
       "tagline": "A quiet browser for the sites you live in.",
       "description": "Minimal WebKit windows with per-site profiles, aliases and keyboard-first control.",
       "slug": "lowkey",

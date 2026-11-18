@@ -53,8 +53,21 @@ test('unknown public repositories appear, metadata is escaped, .github is omitte
   assert.ok(!readme.includes('https://github.com/bobuk-io/.github'));
 });
 
-test('source preview links to source instructions, not an unpublished site page', () => {
+test('released lowkey links to the live product page without preview warnings', () => {
   const { readme } = buildProfile([repo('lowkey')], catalog);
+  assert.match(readme, />lowkey<\/a>/);
+  assert.match(readme, /https:\/\/bobuk.io\/apps\/lowkey\//);
+  assert.ok(!readme.includes('source preview'));
+  assert.ok(!readme.includes('No binary release yet'));
+  assert.ok(!readme.includes('brew install'));
+});
+
+test('source preview links to source instructions, not an unpublished site page', () => {
+  const previewCatalog = structuredClone(catalog);
+  const app = previewCatalog.apps.find(app => app.repo === 'lowkey');
+  app.sourcePreview = true;
+  app.category = 'for the web · source preview';
+  const { readme } = buildProfile([repo('lowkey')], previewCatalog);
   assert.match(readme, /source preview/);
   assert.match(readme, /https:\/\/github.com\/bobuk-io\/lowkey#install-from-source/);
   assert.match(readme, /No binary release yet/);

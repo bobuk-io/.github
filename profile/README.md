@@ -40,11 +40,11 @@ Public source code, focused apps, and a place to ask for help.
     </td>
   </tr>
   <tr>
-    <td width="88" align="center"><a href="https://github.com/bobuk-io/lowkey"><img src="https://raw.githubusercontent.com/bobuk-io/.github/main/profile/assets/lowkey-icon.png" width="64" alt="Lowkey icon"></a></td>
+    <td width="88" align="center"><a href="https://bobuk.io/apps/lowkey/"><img src="https://raw.githubusercontent.com/bobuk-io/.github/main/profile/assets/lowkey-icon.png" width="64" alt="lowkey icon"></a></td>
     <td>
-      <b><a href="https://github.com/bobuk-io/lowkey">Lowkey</a></b> · <sub>for the web · source preview</sub><br>
+      <b><a href="https://github.com/bobuk-io/lowkey">lowkey</a></b> · <sub>for the web</sub><br>
       <b>A quiet browser for the sites you live in.</b> Minimal WebKit windows with per-site profiles, aliases and keyboard-first control.<br>
-      <a href="https://github.com/bobuk-io/lowkey#install-from-source">Build from source →</a> · No binary release yet.
+      <a href="https://bobuk.io/apps/lowkey/">Install →</a>
     </td>
   </tr>
 </table>
